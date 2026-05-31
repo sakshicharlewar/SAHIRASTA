@@ -61,8 +61,12 @@ const distPath = path.resolve(__dirname, '../../dist');
 app.use(express.static(distPath));
 
 // Catch all handler: send back React's index.html file for any non-API routes
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(distPath, 'index.html'));
+app.use((req, res, next) => {
+  if (!req.url.startsWith('/api')) {
+    res.sendFile(path.resolve(distPath, 'index.html'));
+  } else {
+    next();
+  }
 });
 
 app.listen(PORT, () => {
