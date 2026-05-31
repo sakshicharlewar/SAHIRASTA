@@ -52,14 +52,13 @@ const initDb = () => {
       created_at TEXT DEFAULT CURRENT_TIMESTAMP,
       updated_at TEXT DEFAULT CURRENT_TIMESTAMP
     );
-<<<<<<< HEAD
 
     CREATE TABLE IF NOT EXISTS proposals (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       property_id INTEGER NOT NULL,
       user_id INTEGER NOT NULL,
       offered_rent REAL NOT NULL,
-      status TEXT DEFAULT 'pending', -- pending, approved, rejected
+      status TEXT DEFAULT 'pending',
       message TEXT,
       created_at TEXT DEFAULT CURRENT_TIMESTAMP,
       FOREIGN KEY (property_id) REFERENCES properties (id),
@@ -87,8 +86,6 @@ const initDb = () => {
       FOREIGN KEY (property_id) REFERENCES properties (id),
       UNIQUE(user_id, property_id)
     );
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   `);
   console.log('Database initialized successfully');
 };

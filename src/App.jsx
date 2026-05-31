@@ -14,7 +14,6 @@ import MapViewPage from './pages/MapViewPage';
 import SavedHomesPage from './pages/SavedHomesPage';
 import CommuteInsightsPage from './pages/CommuteInsightsPage';
 import AccountPage from './pages/AccountPage';
-<<<<<<< HEAD
 import ListPropertySection from './components/ListPropertySection';
 import RegisterPropertyPage from './pages/RegisterPropertyPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
@@ -22,16 +21,6 @@ import DeepConversionReportPage from './pages/DeepConversionReportPage';
 import PropertyDetailPage from './pages/PropertyDetailPage';
 import { AuthProvider } from './context/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
-=======
-<<<<<<< HEAD
-import ListPropertySection from './components/ListPropertySection';
-import RegisterPropertyPage from './pages/RegisterPropertyPage';
-import AdminDashboardPage from './pages/AdminDashboardPage';
-import { AuthProvider } from './context/AuthContext';
-import ProtectedRoute from './components/ProtectedRoute';
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 
 const LandingPage = () => (
   <div className="bg-surface font-body text-on-surface min-h-screen">
@@ -40,14 +29,7 @@ const LandingPage = () => (
       <Hero />
       <PreviewSection />
       <ValueProp />
-<<<<<<< HEAD
       <ListPropertySection />
-=======
-<<<<<<< HEAD
-      <ListPropertySection />
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
     </main>
     <Footer />
   </div>
@@ -55,10 +37,6 @@ const LandingPage = () => (
 
 function App() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
     <AuthProvider>
       <BrowserRouter>
         <Routes>
@@ -67,43 +45,18 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/dashboard" element={<ProtectedRoute><DashboardPage /></ProtectedRoute>} />
           <Route path="/properties" element={<PropertiesPage />} />
-<<<<<<< HEAD
           <Route path="/properties/:id" element={<ProtectedRoute><PropertyDetailPage /></ProtectedRoute>} />
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
           <Route path="/commute-setup" element={<ProtectedRoute><CommuteSetupPage /></ProtectedRoute>} />
           <Route path="/map-view" element={<ProtectedRoute><MapViewPage /></ProtectedRoute>} />
           <Route path="/saved-homes" element={<ProtectedRoute><SavedHomesPage /></ProtectedRoute>} />
           <Route path="/commute-insights" element={<ProtectedRoute><CommuteInsightsPage /></ProtectedRoute>} />
-<<<<<<< HEAD
           <Route path="/deep-report" element={<ProtectedRoute><DeepConversionReportPage /></ProtectedRoute>} />
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
           <Route path="/account" element={<ProtectedRoute><AccountPage /></ProtectedRoute>} />
           <Route path="/register-property" element={<RegisterPropertyPage />} />
           <Route path="/admin" element={<AdminDashboardPage />} />
         </Routes>
       </BrowserRouter>
     </AuthProvider>
-<<<<<<< HEAD
-=======
-=======
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/dashboard" element={<DashboardPage />} />
-        <Route path="/properties" element={<PropertiesPage />} />
-        <Route path="/commute-setup" element={<CommuteSetupPage />} />
-        <Route path="/map-view" element={<MapViewPage />} />
-        <Route path="/saved-homes" element={<SavedHomesPage />} />
-        <Route path="/commute-insights" element={<CommuteInsightsPage />} />
-        <Route path="/account" element={<AccountPage />} />
-      </Routes>
-    </BrowserRouter>
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   );
 }
 

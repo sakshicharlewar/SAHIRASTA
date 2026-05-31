@@ -88,7 +88,6 @@ async function seed() {
 
     insertMany(properties);
 
-<<<<<<< HEAD
     // Seed property history for some properties
     const propertyIds = db.prepare('SELECT id FROM properties').all();
     const historyStmt = db.prepare(`
@@ -97,25 +96,19 @@ async function seed() {
     `);
 
     propertyIds.forEach((p, idx) => {
-      if (idx % 3 === 0) { // Seed history for every 3rd property
+      if (idx % 3 === 0) {
         historyStmt.run(p.id, 'Rahul Sharma', '+91 98765 43210', 'Great owner, very responsive to repair requests. The locality is peaceful.', '18 Months', 5);
         historyStmt.run(p.id, 'Anjali Verma', '+91 87654 32109', 'Lived here for 2 years. Loved the balcony view, but parking is a bit tight.', '24 Months', 4);
       }
     });
 
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
     // Insert Nagpur CBD as a workplace
     db.prepare(`
       INSERT INTO workplaces (name, lat, lng, city, state)
       VALUES (?, ?, ?, ?, ?)
     `).run('Sitabuldi CBD', CBD.lat, CBD.lng, 'Nagpur', 'Maharashtra');
 
-<<<<<<< HEAD
     console.log(`Successfully seeded 50 properties, history, and 1 workplace for Nagpur.`);
-=======
-    console.log(`Successfully seeded 50 properties and 1 workplace for Nagpur.`);
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   } catch (error) {
     console.error('Error seeding database:', error);
   } finally {

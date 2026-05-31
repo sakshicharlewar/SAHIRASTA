@@ -158,7 +158,6 @@ export const deleteProperty = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-<<<<<<< HEAD
 
 export const getPropertyHistory = async (req, res) => {
   try {
@@ -169,5 +168,3 @@ export const getPropertyHistory = async (req, res) => {
     res.status(500).json({ error: error.message });
   }
 };
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8

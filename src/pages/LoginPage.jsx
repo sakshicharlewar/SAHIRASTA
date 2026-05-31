@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-// Force Vite re-bundle: 1774599756105
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -22,21 +17,6 @@ const LoginPage = () => {
     } else {
       setError(result.error);
     }
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
-const LoginPage = () => {
-  const navigate = useNavigate();
-
-  const handleSignIn = (e) => {
-    e.preventDefault();
-    // After sign-in, navigate to dashboard
-    navigate('/dashboard');
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   };
 
   return (
@@ -85,10 +65,6 @@ const LoginPage = () => {
             <p className="text-on-surface-variant font-medium">Continue your heritage journey.</p>
           </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
           {error && (
             <div className="mb-6 p-4 bg-error-container text-on-error-container rounded-xl text-sm font-bold flex items-center gap-2">
               <span className="material-symbols-outlined text-sm">error</span>
@@ -96,11 +72,6 @@ const LoginPage = () => {
             </div>
           )}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
           <form className="space-y-6" onSubmit={handleSignIn}>
             {/* Email */}
             <div className="space-y-2">
@@ -116,16 +87,8 @@ const LoginPage = () => {
                   placeholder="name@example.com"
                   type="email"
                   required
-<<<<<<< HEAD
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-=======
-<<<<<<< HEAD
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                 />
               </div>
             </div>
@@ -149,16 +112,8 @@ const LoginPage = () => {
                   placeholder="••••••••"
                   type="password"
                   required
-<<<<<<< HEAD
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-=======
-<<<<<<< HEAD
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                 />
               </div>
             </div>

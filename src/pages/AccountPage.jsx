@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -16,13 +12,6 @@ L.Icon.Default.mergeOptions({
   iconUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-icon.png',
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 
 const navLinks = [
   { icon: 'dashboard', label: 'Dashboard', path: '/dashboard' },
@@ -34,10 +23,6 @@ const navLinks = [
 
 const AccountPage = () => {
   const navigate = useNavigate();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   const { user, updateWorkplace, logout } = useAuth();
   const [workplace, setWorkplace] = useState({
     lat: user?.workplace_lat || 21.1458,
@@ -69,11 +54,6 @@ const AccountPage = () => {
       setSaveStatus('Failed to save.');
     }
   };
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   return (
     <div className="bg-surface text-on-surface font-body">
       <header className="bg-white shadow-sm sticky top-0 z-50">
@@ -88,10 +68,6 @@ const AccountPage = () => {
           </div>
           <div className="flex items-center gap-4">
             <button className="p-2 rounded-full hover:bg-slate-50"><span className="material-symbols-outlined text-on-surface-variant">notifications</span></button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
             <button className="p-2 rounded-full hover:bg-slate-50" onClick={logout} title="Sign Out">
               <span className="material-symbols-outlined text-on-surface-variant">logout</span>
             </button>
@@ -100,14 +76,6 @@ const AccountPage = () => {
               <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/20">
                 <img alt="User" src={`https://ui-avatars.com/api/?name=${user?.name}&background=random`} className="w-full h-full object-cover" />
               </div>
-<<<<<<< HEAD
-=======
-=======
-            <button className="p-2 rounded-full hover:bg-slate-50"><span className="material-symbols-outlined text-on-surface-variant">settings</span></button>
-            <div className="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high border border-outline-variant/20">
-              <img alt="User" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXP10LLQ9pIrajiQGrh7oQV2ViJgM-_MKSPDES5B9tbGcX7YAopN1O-yw461quFywK9vqXqP2zG9heVScpIbegvKXdBL_V92vTo3zGGGIKrQ0EkNjRHsC4Wcb1pwskZpx2kmEJpdsLbFYQNRvI9IfAUZ88y6t8R7_X-7PCnHmTnzOlBEQIewqSU6aND1utSoJW0dmUnlLqjZ4SL-Dn9yNkvHS7xbE9NAyPhshlOst8mvMGxMeGJ7Cl7FUW8b0FbIqSWAKVb0tK9BjA" className="w-full h-full object-cover" />
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
             </div>
           </div>
         </div>
@@ -130,15 +98,7 @@ const AccountPage = () => {
           </div>
           <div className="mt-auto flex flex-col gap-1 border-t border-outline-variant/10 pt-4">
             <a className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-600 rounded-xl cursor-pointer"><span className="material-symbols-outlined">help_outline</span><span className="font-medium">Help Center</span></a>
-<<<<<<< HEAD
             <a className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-600 rounded-xl cursor-pointer" onClick={logout}><span className="material-symbols-outlined">logout</span><span className="font-medium">Sign Out</span></a>
-=======
-<<<<<<< HEAD
-            <a className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-600 rounded-xl cursor-pointer" onClick={logout}><span className="material-symbols-outlined">logout</span><span className="font-medium">Sign Out</span></a>
-=======
-            <a className="flex items-center gap-3 px-4 py-3 text-slate-500 hover:text-blue-600 rounded-xl cursor-pointer" onClick={() => navigate('/login')}><span className="material-symbols-outlined">logout</span><span className="font-medium">Sign Out</span></a>
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
           </div>
         </aside>
 
@@ -163,10 +123,6 @@ const AccountPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-1">
                     <label className="text-xs font-bold text-outline uppercase tracking-[0.05em]">Full Name</label>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                     <div className="bg-surface-container-high rounded-lg px-4 py-3 text-on-surface font-medium">{user?.name}</div>
                   </div>
                   <div className="space-y-1">
@@ -204,20 +160,6 @@ const AccountPage = () => {
                         {saveStatus || 'Save Workplace Profile'}
                       </button>
                     </div>
-<<<<<<< HEAD
-=======
-=======
-                    <div className="bg-surface-container-high rounded-lg px-4 py-3 text-on-surface font-medium">Arjun Varma</div>
-                  </div>
-                  <div className="space-y-1">
-                    <label className="text-xs font-bold text-outline uppercase tracking-[0.05em]">Email Address</label>
-                    <div className="bg-surface-container-high rounded-lg px-4 py-3 text-on-surface font-medium">arjun.v@sahirasta.com</div>
-                  </div>
-                  <div className="space-y-1 md:col-span-2">
-                    <label className="text-xs font-bold text-outline uppercase tracking-[0.05em]">Primary Residence</label>
-                    <div className="bg-surface-container-high rounded-lg px-4 py-3 text-on-surface font-medium">Bungalow 42, Heritage Enclave, South Delhi</div>
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                   </div>
                 </div>
               </section>

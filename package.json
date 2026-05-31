@@ -10,22 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
     "leaflet": "^1.9.4",
     "leaflet.heat": "^0.2.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-leaflet": "^5.0.0",
-<<<<<<< HEAD
-=======
-=======
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
     "react-router-dom": "^7.13.2"
   },
   "devDependencies": {

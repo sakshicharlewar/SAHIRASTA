@@ -4,10 +4,7 @@ import {
   createProperty, 
   getFilteredProperties, 
   getPropertyById,
-<<<<<<< HEAD
   getPropertyHistory,
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   deleteProperty
 } from '../controllers/propertyController.js';
 
@@ -17,10 +14,7 @@ router.get('/', getProperties);
 router.post('/', createProperty);
 router.get('/filtered', getFilteredProperties);
 router.get('/:id', getPropertyById);
-<<<<<<< HEAD
 router.get('/:id/history', getPropertyHistory);
-=======
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 router.delete('/:id', deleteProperty);
 
 export default router;

@@ -74,15 +74,7 @@ const ListPropertySection = () => {
             <div className="flex flex-wrap gap-4 pt-2">
               <button
                 className="px-8 py-4 bg-tertiary text-white font-bold rounded-xl shadow-xl shadow-tertiary/20 hover:-translate-y-1 transition-all active:scale-95 flex items-center gap-2"
-<<<<<<< HEAD
                 onClick={() => navigate('/register-property')}
-=======
-<<<<<<< HEAD
-                onClick={() => navigate('/register-property')}
-=======
-                onClick={() => navigate('/owner-login')}
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
               >
                 Register Your Property
                 <span className="material-symbols-outlined">arrow_forward</span>
@@ -151,15 +143,7 @@ const ListPropertySection = () => {
             <p className="text-on-surface-variant font-medium">Join 3,200+ property owners already on SahiRasta.</p>
             <button
               className="px-8 py-3 bg-primary text-white font-bold rounded-xl shadow-lg shadow-primary/20 hover:bg-primary-container transition-all active:scale-95 flex items-center gap-2"
-<<<<<<< HEAD
               onClick={() => navigate('/register-property')}
-=======
-<<<<<<< HEAD
-              onClick={() => navigate('/register-property')}
-=======
-              onClick={() => navigate('/owner-login')}
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
             >
               Get Started Free
               <span className="material-symbols-outlined text-lg">east</span>

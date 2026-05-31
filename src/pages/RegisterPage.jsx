@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
-// Force Vite re-bundle: 1774599756105
 
 const RegisterPage = () => {
   const navigate = useNavigate();
@@ -23,21 +18,6 @@ const RegisterPage = () => {
     } else {
       setError(result.error);
     }
-<<<<<<< HEAD
-=======
-=======
-import React from 'react';
-import { useNavigate } from 'react-router-dom';
-
-const RegisterPage = () => {
-  const navigate = useNavigate();
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // After registration, navigate to login
-    navigate('/login');
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
   };
 
   const handleProtectedLink = (e) => {
@@ -103,10 +83,6 @@ const RegisterPage = () => {
               </p>
             </div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
             {error && (
               <div className="mb-6 p-4 bg-error-container text-on-error-container rounded-xl text-sm font-bold flex items-center gap-2">
                 <span className="material-symbols-outlined text-sm">error</span>
@@ -114,11 +90,6 @@ const RegisterPage = () => {
               </div>
             )}
 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
             <form className="space-y-6" onSubmit={handleSubmit}>
               {/* Full Name */}
               <div className="space-y-2">
@@ -130,16 +101,8 @@ const RegisterPage = () => {
                   placeholder="Arjun Malhotra"
                   type="text"
                   required
-<<<<<<< HEAD
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-=======
-<<<<<<< HEAD
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                 />
               </div>
 
@@ -153,16 +116,8 @@ const RegisterPage = () => {
                   placeholder="arjun@sahirasta.in"
                   type="email"
                   required
-<<<<<<< HEAD
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-=======
-<<<<<<< HEAD
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                 />
               </div>
 
@@ -177,16 +132,8 @@ const RegisterPage = () => {
                     placeholder="••••••••"
                     type="password"
                     required
-<<<<<<< HEAD
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-=======
-<<<<<<< HEAD
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                   />
                 </div>
                 <div className="space-y-2">
@@ -198,18 +145,9 @@ const RegisterPage = () => {
                     placeholder="••••••••"
                     type="password"
                     required
-<<<<<<< HEAD
                     // Confirm field intentionally matches password state for now
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
-=======
-<<<<<<< HEAD
-                    // Confirm field intentionally matches password state for now
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-=======
->>>>>>> 90a57079e5fcd63a8eef1ea5655692b4b5b26858
->>>>>>> ea169e37f18b2fc580668ac87b740c8361c3ceb8
                   />
                 </div>
               </div>
