@@ -2,6 +2,8 @@ import express from 'express';
 import cors from 'cors';
 import morgan from 'morgan';
 import dotenv from 'dotenv';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { initDb } from './db.js';
 import propertyRoutes from './routes/propertyRoutes.js';
 import authRoutes from './routes/authRoutes.js';
@@ -10,6 +12,9 @@ import savedPropertyRoutes from './routes/savedPropertyRoutes.js';
 
 dotenv.config();
 initDb();
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -51,12 +56,15 @@ app.get('/api/commute', (req, res) => {
   });
 });
 
-// 404 Handler
-app.use((req, res) => {
-  console.log('404 Not Found:', req.method, req.url);
-  res.status(404).json({ error: `Path ${req.url} not found on this server.` });
+// Serve static files from the React app in production
+const distPath = path.resolve(__dirname, '../../dist');
+app.use(express.static(distPath));
+
+// Catch all handler: send back React's index.html file for any non-API routes
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(distPath, 'index.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`SahiRasta Backend running on http://localhost:${PORT}`);
+  console.log(`SahiRasta running on http://localhost:${PORT}`);
 });
