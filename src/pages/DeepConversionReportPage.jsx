@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../utils/api';
 import { MapContainer, TileLayer, Marker, Polyline } from 'react-leaflet';
 import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -14,7 +15,7 @@ const DeepConversionReportPage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/properties');
+        const response = await fetch(`${API_BASE_URL}/api/properties`);
         const data = await response.json();
         // Sort by commute score descending for the "Top Conversions"
         setProperties(data.sort((a, b) => b.commute_score - a.commute_score).slice(0, 5));

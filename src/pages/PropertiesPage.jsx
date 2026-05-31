@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../utils/api';
 
 // Haversine formula for distance calculation
 const calculateDistance = (lat1, lon1, lat2, lon2) => {
@@ -118,7 +119,7 @@ const PropertiesPage = () => {
 
   const fetchSavedProperties = async () => {
     try {
-      const response = await fetch(`http://localhost:5000/api/saved/user/${user.id}`);
+      const response = await fetch(`${API_BASE_URL}/api/saved/user/${user.id}`);
       const data = await response.json();
       if (!data.error) {
         setSavedPropertyIds(new Set(data.map(p => p.id)));
@@ -134,7 +135,7 @@ const PropertiesPage = () => {
       return;
     }
     try {
-      const res = await fetch('http://localhost:5000/api/saved/toggle', {
+      const res = await fetch(`${API_BASE_URL}/api/saved/toggle`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ property_id: propertyId, user_id: user.id })
@@ -155,7 +156,7 @@ const PropertiesPage = () => {
   const fetchProperties = async () => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/properties');
+      const response = await fetch(`${API_BASE_URL}/api/properties`);
       const data = await response.json();
       setAllProperties(data);
       setDisplayedProperties(data);

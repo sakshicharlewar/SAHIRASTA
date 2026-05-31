@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../utils/api';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
@@ -20,8 +21,8 @@ const PropertyDetailPage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const propRes = await fetch(`http://localhost:5000/api/properties/${id}`);
-        const histRes = await fetch(`http://localhost:5000/api/properties/${id}/history`);
+        const propRes = await fetch(`${API_BASE_URL}/api/properties/${id}`);
+        const histRes = await fetch(`${API_BASE_URL}/api/properties/${id}/history`);
         
         const propData = await propRes.json();
         
@@ -51,7 +52,7 @@ const PropertyDetailPage = () => {
 
     setSubmitting(true);
     try {
-      const response = await fetch('http://localhost:5000/api/proposals', {
+      const response = await fetch(`${API_BASE_URL}/api/proposals`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

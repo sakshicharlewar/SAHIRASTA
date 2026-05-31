@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { API_BASE_URL } from '../utils/api';
 
 const AdminDashboardPage = () => {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ const AdminDashboardPage = () => {
 
   const fetchProperties = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/properties');
+      const response = await fetch(`${API_BASE_URL}/api/properties`);
       if (response.ok) {
         const data = await response.json();
         setProperties(data);
@@ -43,7 +44,7 @@ const AdminDashboardPage = () => {
     if (!window.confirm('Are you sure you want to delete this property?')) return;
     
     try {
-      const response = await fetch(`http://localhost:5000/api/properties/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/api/properties/${id}`, {
         method: 'DELETE'
       });
       if (response.ok) {

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../utils/api';
 
 const SavedHomesPage = () => {
   const navigate = useNavigate();
@@ -19,7 +20,7 @@ const SavedHomesPage = () => {
   const fetchSavedProperties = async () => {
     setLoading(true);
     try {
-      const res = await fetch(`http://localhost:5000/api/saved/user/${user.id}`);
+      const res = await fetch(`${API_BASE_URL}/api/saved/user/${user.id}`);
       const data = await res.json();
       if (!data.error) {
         setSavedProperties(data);
@@ -33,7 +34,7 @@ const SavedHomesPage = () => {
 
   const removeSavedProperty = async (propertyId) => {
     try {
-      await fetch('http://localhost:5000/api/saved/toggle', {
+      await fetch(`${API_BASE_URL}/api/saved/toggle`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ property_id: propertyId, user_id: user.id })

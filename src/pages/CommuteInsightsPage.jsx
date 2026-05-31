@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { API_BASE_URL } from '../utils/api';
 
 // Haversine distance
 const calculateDistance = (lat1, lon1, lat2, lon2) => {
@@ -32,7 +33,7 @@ const CommuteInsightsPage = () => {
   useEffect(() => {
     const fetchProperties = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/properties');
+        const response = await fetch(`${API_BASE_URL}/api/properties`);
         const data = await response.json();
         setProperties(data);
       } catch (error) {
