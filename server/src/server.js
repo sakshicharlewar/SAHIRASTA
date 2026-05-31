@@ -63,7 +63,13 @@ app.use(express.static(distPath));
 // Catch all handler: send back React's index.html file for any non-API routes
 app.use((req, res, next) => {
   if (!req.url.startsWith('/api')) {
-    res.sendFile(path.resolve(distPath, 'index.html'));
+    const indexPath = path.resolve(distPath, 'index.html');
+    res.sendFile(indexPath, (err) => {
+      if (err) {
+        console.error('Error sending index.html:', err);
+        res.status(404).json({ error: 'Frontend not built yet' });
+      }
+    });
   } else {
     next();
   }
